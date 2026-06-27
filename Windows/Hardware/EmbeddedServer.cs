@@ -164,6 +164,7 @@ public sealed class EmbeddedServer : IDisposable
                     if (piPei.Success)
                     {
                         _suidaoURL = piPei.Value;
+                        SaveTunnelUrlToSettings(_suidaoURL);
                         urlJieguo.TrySetResult(_suidaoURL);
                     }
                 }
@@ -217,6 +218,31 @@ public sealed class EmbeddedServer : IDisposable
             catch { }
         }
         return "";
+    }
+
+    private void SaveTunnelUrlToSettings(string url)
+    {
+        try
+        {
+            var lujing = Path.Combine(AppContext.BaseDirectory, "settings.ini");
+            if (!File.Exists(lujing)) return;
+            var hang = File.ReadAllLines(lujing, Encoding.UTF8);
+            var yigengxin = false;
+            for (var i = 0; i < hang.Length; i++)
+            {
+                if (hang[i].StartsWith("relayUrl=", StringComparison.OrdinalIgnoreCase))
+                {
+                    hang[i] = "relayUrl=" + url;
+                    yigengxin = true;
+                    break;
+                }
+            }
+            if (yigengxin)
+            {
+                File.WriteAllLines(lujing, hang, Encoding.UTF8);
+            }
+        }
+        catch { }
     }
 
     private async Task AcceptLoop(CancellationToken quxiao)

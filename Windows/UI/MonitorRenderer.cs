@@ -18,8 +18,8 @@ internal sealed class MonitorRenderer : IDisposable
     private const int tokenhuodonghangshu = 7;
     private const int tokenhuodongfangkuaishu = 371;
     private const int tokenhuodongbiaoqianshu = 2;
-    private static readonly int[] tokenmeirireduyuzhi = { 1, 2_000_000, 4_000_000, 6_000_000, 8_000_000, 10_000_000 };
-    private static readonly int[] tokenmeizhoureduyuzhi = { 1, 10_000_000, 20_000_000, 30_000_000, 40_000_000, 50_000_000 };
+    private static readonly int[] tokenmeirireduyuzhi = { 1, 30_000_000, 60_000_000, 90_000_000, 120_000_000, 150_000_000 };
+    private static readonly int[] tokenmeizhoureduyuzhi = { 1, 150_000_000, 300_000_000, 450_000_000, 600_000_000, 750_000_000 };
     private static readonly Color[] tokenreduyanse =
     {
         Color.FromArgb(72, 240, 242, 247),
