@@ -23,6 +23,9 @@ embedded-server-key.txt
 cloudflared.exe
 *.log
 
+# Build scripts (keep local only)
+*.cmd
+
 # IDE
 /.idea/
 *.suo
