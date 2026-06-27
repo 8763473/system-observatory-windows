@@ -1,0 +1,30 @@
+# Build outputs
+/bin/
+/obj/
+/publish/
+/backups/
+系统观测台.exe
+
+# Android (tracked in separate repo)
+/Android/
+
+# Runtime data
+token_collector_heartbeat.txt
+token_usage_daily.json
+token_usage_daily.json.bak
+settings.ini
+*.txt
+*.json
+*.json.bak
+embedded-server-key.txt
+
+# Temp
+cloudflared.exe
+*.log
+
+# IDE
+/.idea/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
