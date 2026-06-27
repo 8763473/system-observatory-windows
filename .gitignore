@@ -7,6 +7,7 @@
 
 # Android (tracked in separate repo)
 /Android/
+系统观测台.apk
 
 # Runtime data
 token_collector_heartbeat.txt
